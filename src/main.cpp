@@ -863,7 +863,8 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
     while (nTime > 0 && bnResult < bnProofOfWorkLimit)
     {
         // Maximum 400% adjustment...
-        bnResult *= 4;
+        //bnResult *= 4;
+        bnResult = (bnResult * 99) / 70;
         // ... in best-case exactly 4-times-normal target time
         nTime -= nTargetTimespan*4;
     }
@@ -1741,7 +1742,8 @@ bool CBlock::CheckBlock() const
 
     // Check timestamp
     if (GetBlockTime() > GetAdjustedTime() + 2 * 60 * 60)
-        return error("CheckBlock() : block timestamp too far in the future");
+        //return error("CheckBlock() : block timestamp too far in the future");
+        return error("AcceptBlock() : block timestamp too far in the future");
 
     // First transaction must be coinbase, the rest must not be
     if (vtx.empty() || !vtx[0].IsCoinBase())
@@ -1799,7 +1801,8 @@ bool CBlock::AcceptBlock()
         return DoS(100, error("AcceptBlock() : incorrect proof of work"));
 
     // Check timestamp against prev
-    if (GetBlockTime() <= pindexPrev->GetMedianTimePast())
+    //if (GetBlockTime() <= pindexPrev->GetMedianTimePast())
+    if ((nHeight > 87948) && (GetBlockTime() <= pindexPrev->GetBlockTime() - 2 * 60 * 60))
         return error("AcceptBlock() : block's timestamp is too early");
 
     // Check that all transactions are finalized
