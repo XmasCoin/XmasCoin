@@ -831,8 +831,9 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     int64 nSubsidy = 365 * COIN;
 
 
-    // Subsidy is cut in half every 3650000 blocks, which will occur approximately every  years
-    nSubsidy >>= (nHeight / 3650000); // XmasCoin: 96B blocks in ~4 years
+    // Subsidy is cut in half every 840000 blocks, which will occur approximately every  years
+    //nSubsidy >>= (nHeight / 840000); // XmasCoin: 96B blocks in ~4 years
+    nSubsidy >>= (nHeight / 959220); // XmasCoin: 960M blocks in ~4 years
 
     return nSubsidy + nFees;
 }
