@@ -8,6 +8,7 @@ API for distribution totals and recent transactions.
 - Claims creator fees (pump.fun or pump.swap depending on bonding status).
 - Keeps a small SOL reserve before distributing.
 - Distributes to eligible holders based on token ownership.
+- Requires min holding amount of 0.05% supply.
 - Persists distribution totals and exposes them via HTTP endpoints.
 
 ## Requirements
