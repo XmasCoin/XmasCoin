@@ -25,7 +25,7 @@ const PUMP_EVENT_AUTHORITY = new PublicKey("Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr
 const PUMPSWAP_EVENT_AUTHORITY = new PublicKey("GS4CU59F31iL7aR2Q8zVS8DRrcRnXX1yjQ66TqNVQnaR");
 
 const SPECIFIC_MINT = new PublicKey("AkY2Z8F6NfvamwSMBJgVrKJKLhKxFfm5hAqzqHPCpump");
-const MIN_NEEDED_PERCENTAGE = 0.1;
+const MIN_NEEDED_PERCENTAGE = 0.05;
 
 const TOTAL_FILE = path.join(__dirname, "total_distributed_sol.json");
 
