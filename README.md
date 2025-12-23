@@ -3,8 +3,10 @@ XmasCoin integration/staging tree
 
 http://www.xmascoin.info
 
-Copyright (c) 2009-2014 Bitcoin Developers
-Copyright (c) 2013-2014 XmasCoin Developers
+$xmascoin - AkY2Z8F6NfvamwSMBJgVrKJKLhKxFfm5hAqzqHPCpump
+
+Copyright (c) 2009-2025 Bitcoin Developers
+Copyright (c) 2013-2015 XmasCoin Developers
 
 What is XmasCoin?
 ----------------
